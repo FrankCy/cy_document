@@ -19,7 +19,7 @@ Consul支持多数据中心分布式高可用的服务发现和配置共享服�
   + 官方提供 web 管理界面，etcd 无此功能
   + Consul 1.2 新增 Service Mesh 解决方
 
-- 服务发现比较:Consul vs Zookeeper vs Etcd vs Eureka
+- 服务发现比较:Consul vs Zookeeper vs Etcd vs Eureka <br/>
   [转 ：Consul vs Zookeeper vs Etcd vs Eureka](https://blog.csdn.net/dengyisheng/article/details/71215234)
   + ``` 注：文章有错误 Consul 为 CP ```
 
