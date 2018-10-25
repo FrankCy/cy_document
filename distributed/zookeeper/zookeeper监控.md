@@ -22,3 +22,15 @@ zkServer=localhost:2181
 username: admin
 password: manager
 ```
+
+### 模块简介 ###
+- Hosts
+- Add Node
+- Add Property
+- Delete
+- Import
+- Export
+- Search
+- History
+- Monitor <br/>
+服务器状态
