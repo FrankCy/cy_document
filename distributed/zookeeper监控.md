@@ -8,11 +8,14 @@
 [github：https://github.com/DeemOpen/zkui](https://github.com/DeemOpen/zkui)
 
 - 通过maven编译生成target(```/工程目录/zkui/target```) <br/>
-- 将项目中```config.cfg```拷贝至target下```
+- 将项目中```config.cfg``` 拷贝至target下
 - 修改 config.cfg 内容<br/>
+```
 zkServer=localhost:2181
+```
 - 保存并关闭config.cfg
-- ```target下执行 java -jar zkui-2.0-SNAPSHOT-jar-with-dependencies.jar  ```
+- target下执行
+``` java -jar zkui-2.0-SNAPSHOT-jar-with-dependencies.jar  ```
 - 访问[http://localhost:9090](http://localhost:9090)
 - 账号密码
 ```
