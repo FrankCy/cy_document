@@ -51,6 +51,8 @@ Consul支持多数据中心分布式高可用的服务发现和配置共享服�
 ``` brew services start consul ```
 
 - 访问界面<br/>
-``` http://localhost:8500/ ```
+[http://localhost:8500/](http://localhost:8500/)
 
-### [Spring Cloud 示例](#) ###
+### [Spring Cloud Consul 示例](https://github.com/FrankCy/cloud) ###
+- [服务调用 - cloud-consul-client](https://github.com/FrankCy/cloud/tree/master/cloud-consul-client)
+- [服务发布 - cloud-consul-server](https://github.com/FrankCy/cloud/tree/master/cloud-consul-server)
