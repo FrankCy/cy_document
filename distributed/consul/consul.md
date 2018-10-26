@@ -19,13 +19,27 @@ Consul支持多数据中心分布式高可用的服务发现和配置共享服�
   + 官方提供 web 管理界面，etcd 无此功能
   + Consul 1.2 新增 Service Mesh 解决方
 
-- 服务发现比较:Consul vs Zookeeper vs Etcd vs Eureka <br/>
+- 服务发现比较:Consul vs Zookeeper vs Etcd vs Eureka <br/><br/>
+
+  Feature|Consul|zookeeper|etcd|euerka|
+  ---|:--:|---:|---:|---:
+  服务健康检查|服务状态，内存，硬盘等|(弱)长连接，keepalive|连接心跳|可配支持
+  多数据中心|支持|--|--|--
+  kv存储服务|支持|支持|支持|--
+  一致性|raft|paxos|raft|--
+  cap|cp|cp|cp|ap
+  使用接口(多语言能力)|支持http和dns|客户端|http/grpc|	http（sidecar）
+  watch支持|全量/支持long polling|支持|支持 long polling|支持 long polling/大部分增量
+  自身监控|metrics|--|metrics|metrics
+  安全|acl /https|acl|https支持（弱）|--
+  spring cloud集成|已支持|已支持|已支持|已支持
+
   [转 ：Consul vs Zookeeper vs Etcd vs Eureka](https://blog.csdn.net/dengyisheng/article/details/71215234)
   + ``` 注：文章有错误 Consul 为 CP ```
 
 
-### 安装 ###
-- MAC <br/>
+### MAC 安装 ###
+- brew install <br/>
 ``` brew install consul ```
 
 - 修改Consul启动参数 <br/>
