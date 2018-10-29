@@ -1,9 +1,12 @@
 # Consul #
 ### Consul [官网](https://www.consul.io/) ###
 - 简介<br/>
-Consul支持多数据中心分布式高可用的服务发现和配置共享服务软件，采用```Go语言```开发<br/>
-支持```健康检查```，允许```HTTP```和```DNS```协调调用API存储键值对；<br/>
+Consul支持多数据中心分布式高可用的服务发现和配置共享服务软件，采用```Go语言```开发，天然移植Linux、windows和Mac OS X<br/>
+支持```健康检查```;<br/>
+允许```HTTP```和```DNS```协调调用API存储键值对；<br/>
 采用```Raft一致性协议算法```来保证服务的高可用；<br/>
+采用```Key / Value```存储;<br/>
+支持```多数据中心```方案;<br/>
 使用```GOSSIP协议```管理成员和广播消息，并且支持```ACL```访问控制；<br/>
 
 - 使用场景<br/>
@@ -37,6 +40,14 @@ Consul支持多数据中心分布式高可用的服务发现和配置共享服�
   [转 ：Consul vs Zookeeper vs Etcd vs Eureka](https://blog.csdn.net/dengyisheng/article/details/71215234)
   + ``` 注：文章有错误 Consul 为 CP ```
 
+- 需要知道的概念<br/>
+  + Cluster环境
+  要想利用Consul提供的服务实现服务的注册与发现，我们需要搭建Consul Cluster 环境
+  + agent
+  在Consul方案中，每个提供服务的节点上都要部署和运行Consul的agent，所有运行Consul agent节点的集合构成Consul Cluster<br/>
+     + Consul agent 两种运行模式 <br/>
+     Server和Client。这里的Server和Client只是Consul集群层面的区分，与搭建在Cluster之上 的应用服务无关 <br/>
+     以Server模式运行的Consul agent节点用于维护Consul集群的状态，官方建议每个Consul Cluster至少有3个或以上的运行在Server mode的Agent，Client节点不限
 
 ### MAC 安装 ###
 - brew install <br/>
@@ -66,7 +77,3 @@ Consul支持多数据中心分布式高可用的服务发现和配置共享服�
 
 - 访问界面<br/>
 [http://localhost:8500/](http://localhost:8500/)
-
-### [Spring Cloud Consul 示例](https://github.com/FrankCy/cloud) ###
-- [服务调用 - cloud-consul-client](https://github.com/FrankCy/cloud/tree/master/cloud-consul-client)
-- [服务发布 - cloud-consul-server](https://github.com/FrankCy/cloud/tree/master/cloud-consul-server)
