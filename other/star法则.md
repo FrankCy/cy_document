@@ -41,7 +41,6 @@ R（结果）|获得系辩论赛冠军|
 ``` 第一步：组织好你的经历 ```<br/>
 In functional CVs, you put your skills into categories then briefly list past job titles at the bottom. These are suitable for those who have been unemployed for long periods, held different types of jobs in the past, changed jobs too frequently, are returning to work after a long period or who wish to change career.<br/>
 ``` 功能型简历——强调技能、资质以及成就。适合于以下情况：有很长时间没有工作过了、过去频繁更换工作不想给招聘者留下不好的印象、工作经历有中断、跨专业求职，但你具有申请职位所需的相关技能。 ``` <br/>
-
 Recent graduates and others on a consistent career path usually opt for the chronological format. These CVs list your jobs and duties for each in reverse chronological order.<br/>
 ``` 时序性简历——是要按照逆时序记录你曾就职的职位的。适合于应届毕业生，或者工作不曾未间断过。 ```
 
@@ -49,10 +48,8 @@ Recent graduates and others on a consistent career path usually opt for the�
 ``` 第二步：给你的成就分类``` <br/>
 When doing up a chronological CV, you should outline sections of your experience, education and skills to show what you’ve accomplished. HR personnel and employers take less than a minute to scan your CV, so it’s imperative to highlight and organize items into several concise and relevant segments.<br/>
 ``` 写时序性简历时，应该着重概括你的经历、教育和技能。HR人员和你的雇主会对你的简历一扫而过，所以简历上必须突出和分成几个简洁、相关的部分。 ```<br/>
-
 If you’re a recent graduate and therefore have not yet been employed, put your Education section first. In addition to the basics – university name, degree and graduation date – you can include relevant coursework, honors or awards.<br/>
 ``` 如果你因为刚刚毕业所以还没有工作经验，那么把你的教育经历放在首位。包括一些基本的方面，比如大学名称，学士学位和毕业日期。当然也包括你修过的相关课程、所获荣誉或奖项等等。 ``` <br/>
-
 Other categories might include Relevant Work Experience, Volunteer Experience, Computer Skills,Publications, Activities, Language Skills and so on.<br/>
 ``` 其他分类还包括相关工作经验、志愿者经历、电脑技能、发表过的文章、参加过的活动、语言能力等等 ``` <br/>
 
@@ -60,7 +57,6 @@ Other categories might include Relevant Work Experience, Volunteer Experience, C
 ``` 第三步：格式可以成就你的简历，也可能毁了它 ```<br/>
 Fonts: Whether you email, fax or post your CV, keep your font plain and easy to read. And select areasonable size – anywhere between 9 and 12 points should be acceptable. Use a sans serif font like Arial or Verdana, not Times New Roman. <br/>
 字体：无论你是发电子邮件、传真或是邮寄你的简历，都应该让你的字体看上去舒服、易于阅读。记得要选择一个合适的字体大小，最好是9号到12号之间。字体方面，最好用Arial或Vrdana，而不是Times New Roman。<br/>
-
 Formatting: Too many different fonts, colors and graphic styles will hold the reader up. Simple bullets are best for separating your duties and skills; use bold and italics sparingly. Formatting should highlight your accomplishments, not draw attention away from them. <br/>
 ``` 格式：过多的字体、颜色和样式会分散读者的注意力。简单的项目符号能最好地表明你的职责和技能，同时，有节制地使用粗体和斜体。使用格式是为了突出你的成就，而非分散别人的注意力。 ```
 
@@ -68,10 +64,8 @@ Formatting: Too many different fonts, colors and graphic styles will hold the re
 ``` 第四步：内容才是王道 ``` <br/>
 Action-words: Use strong Action Verbs to highlight your job experience and duties. Instead of starting your sentence with a noun, kick off with an active verb. For example: Customer Service Representative. Assisted customers, trained and supervised 15 new employees, organized special promotional events.<br/>
 ``` 行为动词：使用简洁有力的动词来突出你的工作经验和职责，而不是用名词开头。比如：客户服务代表。帮助客户，培训和监管15名新员工，组织专门的销售活动。``` <br/>
-
 Numbers: It’s a good idea to include numbers, percentages and amounts in your job descriptions to back up your achievements. For example, Increased monthly sales by £100,000 over a 6-month period. Increased turnover by 20% in first year. Supervised a team of 10 people.<br/>
 ``` 数字：在简历中使用数字或百分比使成就更具有说服力是个不错的主意。例如：销售额在6个月间以每个月£100,000的速度增长，第一年增加了20%的营业额。监管一个10人的团队。 ``` <br/>
-
 Length: No one wants to scan through two or more pages of long-winded accomplishments and experience. If it doesn’t all fit, cut it down to the most relevant and impressive items. <br/>
 ``` 长度：没人愿意看长篇大论的简历。遇到不必要的部分就删减掉，留下最相关、给人印象最深刻的部分。```
 
