@@ -1,4 +1,4 @@
-# Spring Cloud Consul #
+# SC | Consul #
 ### Spring Cloud Consul ###
 - 简介<br/>
 Consul支持多数据中心分布式高可用的服务发现和配置共享服务软件，采用```Go语言```开发<br/>

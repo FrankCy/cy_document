@@ -37,7 +37,13 @@ SkyDNS|Dedicated|Mixed(2)|Go||HTTP/DNS Library|
   + Eureka是Netflix开源套件的一部分，跟Spring Cloud其它组件结合的较好（如：Zuul，Ribbon）
 
 ### Eureka Server REST API 简介 ###
-- REST API 列表
+- REST API 列表<br/>
+
+名称|类型|AP或CP
+---|:--|:---
+操作|http动作|描述
+操作|http动作|描述
+
 
 - REST API 实例
   + 查询所有应用实例
