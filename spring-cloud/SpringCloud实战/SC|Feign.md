@@ -46,4 +46,22 @@ public interface DataService {
 }
 
 ```
+
 @FeignClient注解指定请求服务名为"cloud-data-server"的服务器，根据指定的RequestMapping将请求转换为```http://localhost:8099/cloud-data-server/insertCompany?par1=xxxx```
+
+
+### Feign 工作原理 ###
+
+### Feign 实战 ###
+
+#### Feign Post ／ Get 多参数传递 ####
+- 传递参数方式
+  + 将POJO拆成一个一个独立的属性放在方法参数里 如：```testMethod(String para1, String para2 ... )```
+  + 把方法参数放入Map传递 如：```testMethod(Map<String, String> map)```
+  + 使用GET传递@RequestBody，但```此方法违反Restful规范```
+
+好那我们该怎么解决呢😖
+
+- Feign最佳实践<br/>
+（通过Feign拦截器方式处理）
+  +
