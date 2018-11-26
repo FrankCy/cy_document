@@ -202,5 +202,30 @@ public class TestConfigration {
 })
 ```
 
+- 基于配置文件的方式设置策略
 
+
+#### Ribbon超时重试 ####
+F版中的Ribbon重试机制是默认开启的，添加超时时间和重试策略配置：
+```
+ribbon:
+    ConnectTimeout: 3000
+    ReadTimeout: 60000
+    MaxAutoRetries: 1 #对第一次请求的服务的重试次数
+    MaxAutoRetriesNextServer: 1 #要重试的下一个服务的最大数量（不包括第一个服务）
+    OkToRetryOnAllOperations: true
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule#
+```
+
+#### Ribbon饥饿加载 ####
+默认情况下，Ribbon对客户进行负载均衡时不是在程序启动时加载，而是在调用时加载的，那在实际使用时第一次请求服务需要等待甚至连接超时，我们可以通过配置在服务启动时加载Ribbon客户端负载均衡配置：
+```
+ribbon:
+  eager-load:
+    enabled: true
+    clients: application-name-a, application-name-b, application-name-c
+```
+
+#### 利用配置文件自定义Ribbon客户端 ####
+通过配置文件指定Ribbon默认加载类
 
