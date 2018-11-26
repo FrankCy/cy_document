@@ -63,7 +63,7 @@ server:
   port: 7070
 spring:
   application:
-    name: client-a
+    name: Application_Eureka_Client
 eureka:
   client:
     serviceUrl:
@@ -72,7 +72,7 @@ eureka:
     prefer-ip-address: true
 ```
 
-#### 添加Ribbon并完成客户端负载均衡####
+#### 添加Ribbon并完成客户端负载均衡 ####
 - 添加Ribbon所需依赖
 ```
 <dependencies>
