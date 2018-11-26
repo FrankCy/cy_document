@@ -12,7 +12,7 @@
 - Spring Cloud Ribbon
 根据官方描述大致可以理解为：Ribbon是客户端负载均衡器，赋予应用可以对HTTP与TCP进行操作，客户端负载均衡也是进程内负载均衡的一种。```在Spring Cloud中它是必不可少的，否则服务便不能横向扩展```，且，```Feign和Zuul中默认集成Ribbon```，在服务之间凡是涉及调用的，都可以集成它，以达到让服务提高伸缩性的能力。
 
-### Ribbon 实战 ###
+### Ribbon 实例 ###
 #### 添加Eureka Server ####
 - Spring Boot启动类中添加注解@EnableEurekaServer，声明一个 Eureka Server
 ```
@@ -145,5 +145,18 @@ eureka:
 - 通过访问Ribbon来进行测试客户端负载均衡是否有效
 
 
+### Ribbon 实战 ###
+#### 负载均衡策略 ####
+Ribbon支持哪些负载均衡策略呢，例如Nginx就支持轮询（Round Robin）、权重（Weight）、ip_hash等，在不同的业务场景我们可以采用适合的策略进行使用，下面介绍Ribbon所支持的负载均衡策略：
+
+策略类|命   名|描    述
+---|:--:|:---
+RandomRule|随即策略|随机选择server
+RoundRobinRule|轮询策略|按顺序循环选择server
+RetryRule|重试策略|在一个配置内当选择server不成功，则一直重试选择到一个可用server
+BestAvailableRule|最低并发策略|server检查，如果server断路器打开，则忽略，并再去选择一个并发连接最低的server
+AvailabilityFilteringRule|可用过滤策略|过滤掉一直连接失败并标记为circuit tripped的server，过滤掉那些高并发连接的server（active connections超过配置的阀值）
+ResponseTimeWeightedRule|响应时间加权策略|根据server响应时间分配权重。响应时间越长，权重越低，被选择的概率就越低；响应时间越短，权重越高，被选择到的概率就越高。影响响应时常的因素有：网络、磁盘、IO等
+ZoneAvoidanceRule|区域权衡策略|综合判断server所在区域的性能和server的可用性，轮询选择server，并且判断一个```AWS Zone```的运行性能是否可用，剔除不可用的Zone中的所有server
 
 
