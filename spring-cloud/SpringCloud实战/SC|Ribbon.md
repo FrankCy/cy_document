@@ -159,4 +159,48 @@ AvailabilityFilteringRule|可用过滤策略|过滤掉一直连接失败并标�
 ResponseTimeWeightedRule|响应时间加权策略|根据server响应时间分配权重。响应时间越长，权重越低，被选择的概率就越低；响应时间越短，权重越高，被选择到的概率就越高。影响响应时常的因素有：网络、磁盘、IO等
 ZoneAvoidanceRule|区域权衡策略|综合判断server所在区域的性能和server的可用性，轮询选择server，并且判断一个```AWS Zone```的运行性能是否可用，剔除不可用的Zone中的所有server
 
+- Ribbon 全局策略设置<br/>
+只需要在工程内新建一个类并注入到Spring容器当中即可：
+```
+@Configuration
+public class TestConfigration {
+    @Bean
+    public IRule ribbonRule() {
+        return new RandomRule();
+    }
+}
+```
+就是这么简单，只需要在启动能扫描到的包内添加这段代码指定所要使用七种策略中的某种，就可以设置全局策略
+- 基于注解的方式设置策略
+设置一个特有的策略供源服务使用，可以使用@RibbonClient注解：
+```
+@Configuration
+@AvoidScan
+public class TestConfigration {
+
+    @Autowired
+    IClientConfig icclientconfig;
+
+    @Bean
+    public IRule ribbonRule(IClientConfig icclientconfig) {
+        return new RandomRule();
+    }
+}
+```
+这里@AvoidScan是自定义标签，例子最后会说明。注入的IClientConfig是针对客户端的配置管理器```（com.netflix.client.config）```。<br/>
+修改启动类，并添加@RibbonClient注解，依此来对源服务进行负载约束：
+```
+@RibbonClient(name = "application-Client-a", configuration = TestConfiguration.class)
+@ComponentScan(excludeFilters = {@ComponentScan.Filter(type = FilterType.ANNOTATION, value = {AvoidScan.class})})
+```
+@RibbonClient的意思就是对客户端Application-Client-a的策略是TestConfiguration所指定的策略。这里使用@ComponentScan注解是让Spring不去扫描被@AvoidScan注解标记的配置类，因为配置的是对单个源服务生效的，所以不能应用于全局，如果不排除，启动会报错。<br/>
+同事我们也可以对多个客户端进行策略指定，在启动类上添加以下注解，可以把@RibbonClient注解删除，使用@RibbonClients注解：
+```
+@RibbonClients(value = {
+		@RibbonClient(name = "application-Client-a", configuration = TestConfiguration.class),
+		@RibbonClient(name = "application-Client-b", configuration = TestConfiguration.class)
+})
+```
+
+
 
