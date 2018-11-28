@@ -203,6 +203,7 @@ public class TestConfigration {
 ```
 
 - 基于配置文件的方式设置策略
+Ribbon还支持通过配置文件设置策略
 
 
 #### Ribbon超时重试 ####
@@ -227,5 +228,39 @@ ribbon:
 ```
 
 #### 利用配置文件自定义Ribbon客户端 ####
-通过配置文件指定Ribbon默认加载类
+通过配置文件指定Ribbon默认加载类，从而更改Ribbon客户端的行为方式，这种优先级较高，高于@RibbonClient指定的配置和源码中加载的相关Bean。
+
+配置项|说   明
+---|:--
+<clientName>.ribbon.NFLoadBalancerClassName|指定ILoadBalancer的实现类
+<clientName>.ribbon.NFLoadBalancer|指定IRule的实现类
+<clientName>.ribbon.NFLoadBalancer|指定IPing的实现类
+<clientName>.ribbon.NIWSServerListClassName|指定ServerList实现类
+<clientName>.ribbon.NIWSServerListFilterClassName|指定ServerListFilter实现类
+
+可使用Ribbon自带的实现类，也允许自己实现。下面是一个对```Client源```服务的相关定制示例：
+```
+client:
+    ribbon:
+        NFLoadBalancerClassName: com.netflix.loadbancer.ConfigurationBaseServerList
+        NFLoadBalancerRuleClassName: com.netflix.loadbancer.WeightedResponseTimeRule
+```
+
+#### Ribbon脱离Eureka使用 ####
+默认情况下，Ribbon客户端从Eureka注册中心获取服务注册信息列表，在某些特定的业务情况下，Ribbon要关闭自动订阅服务注册中心的功能，那我们应该如何做到让Ribbon脱离Eureka的管理呢？示例如下：<br/>
+<br/>
+首先要让Ribbon禁用Eureka功能：
+```
+ribbon:
+    eureka:
+        enabled: false
+```
+然后对源服务设定地址列表：
+```
+client:
+    ribbon:
+        listOfServers: http://localhost:7070，http://localhost:7071
+```
+
+
 
