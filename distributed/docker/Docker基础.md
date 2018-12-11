@@ -1,0 +1,31 @@
+# Docker命令 #
+
+## 命令 ##
+- docker info（显示docker容器完整信息）
+- docker images（显示docker所有镜像）
+- dcoker images xxxx（显示镜像xxxx的信息）
+- docker ps（显示正在运行的容器）
+- docker ps -a（显示所有容器，包括运行和结束的）
+- docker ps -l（显示最后一次运行的容器）
+- docker start 容器名称（根据名称启动容器）
+- docker start 容器ID（根据ID启动容器）
+- docker restart xxx（重启容器）
+- docker run -name 容器名称 -i -t ubuntu /bin/bash（创建容器“容器名称”）
+- docker attach xxx（重启容器之后，重新附着在xxx容器上，进入此容器）
+- docker run --name xxxx -d ubuntu /bin/sh -c "while true; do echo hello world; sleep 1; done" （创建守护式[长期运行]容器，-d代表此容器在后台运行，只有主动停止才会停止，循环输出hello world）
+- docker logs（获取容器日志）
+- docker logs --tail 10 daemon_dave（获取日志最后10行内容）
+- docker logs --tail 0 -f daemon_dave（某容器最新日志[非全部日志]）
+- docker ps -aq（列出所有容器ID）
+- docker stop $(docker ps -aq)（停止所有容器）
+- docker rm $(docker ps -aq)（删除所有容器）
+- docker rmi $(docker images - q) （删除所有镜像）
+- docker pull xxx（远程拉取镜像，版本号用：xx.xx表示）
+- docker run -t -i --name new_container ubuntu:12.04 /bin/bash（运行一个带标签的Docker镜像）
+- dcoker search xxxx（检查Docker Hub所有包含xxxx的镜像）
+- docker build（构建新镜像）
+- docker build -t="jamtur01/static_web:v1"（构建过程中设置一个标签，方法为“镜像名:标签”）
+- docker hisotry xxxx （查看某镜像的每一层信息，以及每一层的Dockerfile指令）
+- docker stop ***（停止容器）
+- docker start ***（启动容器）
+- docker restart ***（重启容器）
