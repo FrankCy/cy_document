@@ -1,3 +1,5 @@
+![blockchain](https://github.com/FrankCy/cy_document/blob/master/statics/images/KatalonStudio/Katalon%20Studio%E5%BD%95%E5%88%B6/Katalon%20Studio%20logo.png?raw=true "Logo") <br/>
+
 ## Katalon Studio录制 ##
 ### 简述 ###
 记录一下Katalon Studio录制功能，可以录制并回放，让测试不用人肉的去点击web页面进行测试。
@@ -36,6 +38,15 @@ New -> Project
 至此，配置就结束啦，打开页面录制，然后结束之后切换到Katalon Studio内关闭录制即可获得录制脚本。
 
 
+### 版本 ###
+Katalon Studio
+Version: 5.9.1
+Build: 2
+
+Katalon Studio is up to date.
+
+Copyright Katalon LLC
+[https://www.katalon.com](https://www.katalon.com)
 
 
 
