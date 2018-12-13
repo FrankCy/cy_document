@@ -25,7 +25,7 @@ New -> Project
 点击图标，进行录制
 ```
 
-![blockchain](/FrankCy/cy_document/blob/master/statics/images/KatalonStudio/Katalon%20Studio%E5%BD%95%E5%88%B6/%E5%BD%95%E5%88%B6%E8%84%9A%E6%9C%AC2.png?raw=true "录制2") <br/>
+![blockchain](https://github.com/FrankCy/cy_document/blob/master/statics/images/KatalonStudio/Katalon%20Studio%E5%BD%95%E5%88%B6/%E5%BD%95%E5%88%B6%E8%84%9A%E6%9C%AC2.png?raw=true "录制2") <br/>
 
 ```
 录入要录制的网址；
